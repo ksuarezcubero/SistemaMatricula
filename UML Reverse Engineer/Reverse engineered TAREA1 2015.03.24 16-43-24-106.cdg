@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Reverse engineered TAREA1 2015.03.24 16-43-24-106">
+  <ClassDiagramComponents>
+    <Class xPosition="20.0" yPosition="20.0" package="vista" name="GUIConsultarCursos" visibility="public">
+      <Constructors>
+        <Constructor name="GUIConsultarCursos" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="btnAtras" visibility="private" type="javax.swing.JButton"/>
+        <Field name="jLabel1" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jScrollPane1" visibility="private" type="javax.swing.JScrollPane"/>
+        <Field name="jtaLista" visibility="private" type="javax.swing.JTextArea"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="btnAtrasActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="setTxaLista" visibility="public" returnType="void">
+          <Argument type="String" name="lista"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="20.0" package="vista" name="PanelDataCurso" visibility="public">
+      <Constructors>
+        <Constructor name="PanelDataCurso" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="btnBuscar" visibility="private" type="javax.swing.JButton"/>
+        <Field name="jLabel1" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="lblCreditos" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="lblNombre" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="lblSiglas" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="txtCreditos" visibility="private" type="javax.swing.JTextField"/>
+        <Field name="txtNombre" visibility="private" type="javax.swing.JTextField"/>
+        <Field name="txtSiglas" visibility="private" type="javax.swing.JTextField"/>
+        <Field name="BTNC_Buscar" visibility="public" type="String" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="addEscucha" visibility="public" returnType="void">
+          <Argument type="ControlCursos" name="control"/>
+        </Method>
+        <Method name="setTxtNombre" visibility="public" returnType="void">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="setTxtSiglas" visibility="public" returnType="void">
+          <Argument type="String" name="siglas"/>
+        </Method>
+        <Method name="setTxtCreditos" visibility="public" returnType="void">
+          <Argument type="String" name="creditos"/>
+        </Method>
+        <Method name="getTxtNombre" visibility="public" returnType="String"/>
+        <Method name="getTxtSiglas" visibility="public" returnType="String"/>
+        <Method name="getTxtCreditos" visibility="public" returnType="String"/>
+        <Method name="getTxSiglas" visibility="public" returnType="JTextField"/>
+        <Method name="limpiar" visibility="public" returnType="void"/>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="20.0" package="vista" name="GUIReporte" visibility="public">
+      <Constructors>
+        <Constructor name="GUIReporte" visibility="public">
+          <Argument type="Registro" name="registro"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="control" visibility="private" type="ControlReporte"/>
+        <Field name="btnBuscar" visibility="private" type="javax.swing.JButton"/>
+        <Field name="btnConsultar" visibility="private" type="javax.swing.JButton"/>
+        <Field name="jLabel1" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jLabel2" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jLabel3" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jLabel4" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="panelTabla1" visibility="private" type="vista.PanelTabla"/>
+        <Field name="txtCarnet" visibility="private" type="javax.swing.JTextField"/>
+        <Field name="txtCreditos" visibility="private" type="javax.swing.JTextField"/>
+        <Field name="txtNombre" visibility="private" type="javax.swing.JTextField"/>
+        <Field name="BTN_SALIR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="BTN_CONSULTAR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="txtCarnetActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtNombreActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtCreditosActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="addEscucha" visibility="public" returnType="void">
+          <Argument type="ControlReporte" name="control"/>
+        </Method>
+        <Method name="setTxtNombre" visibility="public" returnType="void">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="setTxtCreditos" visibility="public" returnType="void">
+          <Argument type="String" name="creditos"/>
+        </Method>
+        <Method name="getTxtCarnet" visibility="public" returnType="String"/>
+        <Method name="mensage" visibility="public" returnType="void">
+          <Argument type="String" name="mensage"/>
+        </Method>
+        <Method name="getPanelTabla" visibility="public" returnType="PanelTabla"/>
+      </Methods>
+    </Class>
+    <Class xPosition="920.0" yPosition="20.0" package="vista" name="PanelBotonesEstudiante" visibility="public">
+      <Constructors>
+        <Constructor name="PanelBotonesEstudiante" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="btnAgregar" visibility="private" type="javax.swing.JButton"/>
+        <Field name="btnAtras" visibility="private" type="javax.swing.JButton"/>
+        <Field name="btnConsltar" visibility="private" type="javax.swing.JButton"/>
+        <Field name="btnEliminar" visibility="private" type="javax.swing.JButton"/>
+        <Field name="btnModificar" visibility="private" type="javax.swing.JButton"/>
+        <Field name="BTNE_AGREGAR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="BTNE_ATRAS" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="BTNE_ELIMINAR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="BTNE_CONSULTAR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="BTNE_MODIFICAR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="btnEliminarActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="addEscucha" visibility="public" returnType="void">
+          <Argument type="ControlEstudiantes" name="control"/>
+        </Method>
+        <Method name="estadoBtn" visibility="public" returnType="void">
+          <Argument type="boolean" name="estado"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="20.0" yPosition="420.0" package="vista" name="GUIConsultaEstudiantes" visibility="public">
+      <Constructors>
+        <Constructor name="GUIConsultaEstudiantes" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="btnAtras" visibility="private" type="javax.swing.JButton"/>
+        <Field name="jLabel1" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jScrollPane1" visibility="private" type="javax.swing.JScrollPane"/>
+        <Field name="jtaLista" visibility="private" type="javax.swing.JTextArea"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="btnAtrasActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="setTxaLista" visibility="public" returnType="void">
+          <Argument type="String" name="lista"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="420.0" package="vista" name="GUIBuscarCursos" visibility="public">
+      <Constructors>
+        <Constructor name="GUIBuscarCursos" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="btnAtras" visibility="private" type="javax.swing.JButton"/>
+        <Field name="jLabel1" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jScrollPane1" visibility="private" type="javax.swing.JScrollPane"/>
+        <Field name="jtaLista" visibility="private" type="javax.swing.JTextArea"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="btnAtrasActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="setTxaLista" visibility="public" returnType="void">
+          <Argument type="String" name="lista"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="420.0" package="vista" name="GUICursos" visibility="public">
+      <Constructors>
+        <Constructor name="GUICursos" visibility="public">
+          <Argument type="Registro" name="registro"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="control" visibility="private" type="ControlCursos"/>
+        <Field name="panelBotonesCurso1" visibility="private" type="vista.PanelBotonesCurso"/>
+        <Field name="panelDataCurso1" visibility="private" type="vista.PanelDataCurso"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="mensage" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="mensage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="920.0" yPosition="420.0" package="vista" name="GUIMatricula" visibility="public">
+      <Constructors>
+        <Constructor name="GUIMatricula" visibility="public">
+          <Argument type="Registro" name="registro"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="registro" visibility="private" type="Registro"/>
+        <Field name="control" visibility="private" type="ControlMatricula"/>
+        <Field name="btnAtras" visibility="private" type="javax.swing.JButton"/>
+        <Field name="btnMatricular" visibility="private" type="javax.swing.JButton"/>
+        <Field name="cbxEstudiantes" visibility="private" type="javax.swing.JComboBox"/>
+        <Field name="cbxMateria" visibility="private" type="javax.swing.JComboBox"/>
+        <Field name="jLabel1" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="BTN_ATRAS" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="BTN_ACEPTAR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="llenarCmbx" visibility="public" returnType="void"/>
+        <Method name="getCbxCurso" visibility="public" returnType="JComboBox"/>
+        <Method name="getCbxEstudiante" visibility="public" returnType="JComboBox"/>
+        <Method name="agregarEscucha" visibility="public" returnType="void">
+          <Argument type="ControlMatricula" name="control"/>
+        </Method>
+        <Method name="mensage" visibility="public" returnType="void">
+          <Argument type="String" name="mensage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="20.0" yPosition="820.0" package="vista" name="PanelDataEstudiante" visibility="public">
+      <Constructors>
+        <Constructor name="PanelDataEstudiante" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="btnBuscar" visibility="private" type="javax.swing.JButton"/>
+        <Field name="jLabel1" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="lblCarnet" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="lblNombre" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="txtCarnet" visibility="private" type="javax.swing.JTextField"/>
+        <Field name="txtNombre" visibility="private" type="javax.swing.JTextField"/>
+        <Field name="BTNE_BUSCAR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="setTxtCarnet" visibility="public" returnType="void">
+          <Argument type="String" name="carnet"/>
+        </Method>
+        <Method name="setTxtNombre" visibility="public" returnType="void">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getTxtCarnet" visibility="public" returnType="String"/>
+        <Method name="getTxtNombre" visibility="public" returnType="String"/>
+        <Method name="limpiar" visibility="public" returnType="void"/>
+        <Method name="getTxCarnet" visibility="public" returnType="JTextField"/>
+        <Method name="addEscucha" visibility="public" returnType="void">
+          <Argument type="ControlEstudiantes" name="control"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="820.0" package="vista" name="GUIBuscarEstudiante" visibility="public">
+      <Constructors>
+        <Constructor name="GUIBuscarEstudiante" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="btnAtras" visibility="private" type="javax.swing.JButton"/>
+        <Field name="jLabel1" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jScrollPane1" visibility="private" type="javax.swing.JScrollPane"/>
+        <Field name="jtaLista" visibility="private" type="javax.swing.JTextArea"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="btnAtrasActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="setTxaLista" visibility="public" returnType="void">
+          <Argument type="String" name="lista"/>
+        </Method>
+        <Method name="getTxaLista" visibility="public" returnType="String"/>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="820.0" package="vista" name="PanelBotonesCurso" visibility="public">
+      <Constructors>
+        <Constructor name="PanelBotonesCurso" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="btnAgregar" visibility="private" type="javax.swing.JButton"/>
+        <Field name="btnAtras" visibility="private" type="javax.swing.JButton"/>
+        <Field name="btnConsultar" visibility="private" type="javax.swing.JButton"/>
+        <Field name="btnEliminar" visibility="private" type="javax.swing.JButton"/>
+        <Field name="btnModificar" visibility="private" type="javax.swing.JButton"/>
+        <Field name="BTNC_AGREGAR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="BTNC_CONSULTAR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="BTNC_ELIMINAR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="BTNC_MODIFICAR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="BTNC_ATRAS" visibility="public" type="String" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="addEscucha" visibility="public" returnType="void">
+          <Argument type="ControlCursos" name="control"/>
+        </Method>
+        <Method name="estado" visibility="public" returnType="void">
+          <Argument type="boolean" name="estado"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="920.0" yPosition="820.0" package="vista" name="Principal" visibility="public">
+      <Constructors>
+        <Constructor name="Principal" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="jLabel1" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jMenuBar1" visibility="private" type="javax.swing.JMenuBar"/>
+        <Field name="jmArchivo" visibility="private" type="javax.swing.JMenu"/>
+        <Field name="jmRegistro" visibility="private" type="javax.swing.JMenu"/>
+        <Field name="jmiCursos" visibility="private" type="javax.swing.JMenuItem"/>
+        <Field name="jmiEstudiantes" visibility="private" type="javax.swing.JMenuItem"/>
+        <Field name="jmiMatricula" visibility="private" type="javax.swing.JMenuItem"/>
+        <Field name="jmiReporte" visibility="private" type="javax.swing.JMenuItem"/>
+        <Field name="jmiSalir" visibility="private" type="javax.swing.JMenuItem"/>
+        <Field name="MENU_SALIR" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="MENU_ESTUDIANTES" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="MENU_CURSOS" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="MENU_MATRICULA" visibility="public" type="String" isStatic="true" isFinal="true"/>
+        <Field name="MENU_REPORTE" visibility="public" type="String" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="jmiReporteActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="addEscucha" visibility="public" returnType="void">
+          <Argument type="ActionListener" name="control"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="20.0" yPosition="1220.0" package="vista" name="PanelTabla" visibility="public">
+      <Constructors>
+        <Constructor name="PanelTabla" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="jScrollPane1" visibility="private" type="javax.swing.JScrollPane"/>
+        <Field name="jTable1" visibility="private" type="javax.swing.JTable"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="llenarTabla" visibility="public" returnType="void">
+          <Argument type="String[][]" name="lista"/>
+          <Argument type="String[]" name="etiquetas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="1220.0" package="vista" name="GUIEstudiantes" visibility="public">
+      <Constructors>
+        <Constructor name="GUIEstudiantes" visibility="public">
+          <Argument type="Registro" name="registro"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="controlEstudiantes" visibility="private" type="ControlEstudiantes"/>
+        <Field name="panelBotonesEstudiante1" visibility="private" type="vista.PanelBotonesEstudiante"/>
+        <Field name="panelDataEstudiante1" visibility="private" type="vista.PanelDataEstudiante"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="mensage" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="mensage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="1220.0" package="modelo" name="Registro" visibility="public">
+      <Constructors>
+        <Constructor name="Registro" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="estudiantes" visibility="private" type="ArrayList&lt;Estudiante&gt;"/>
+        <Field name="cursos" visibility="private" type="ArrayList&lt;Curso&gt;"/>
+        <Field name="creditos" visibility="private" type="int"/>
+      </Fields>
+      <Methods>
+        <Method name="agregarEstudiante" visibility="public" returnType="String">
+          <Argument type="Estudiante" name="estudiante"/>
+        </Method>
+        <Method name="verificarEstudiante" visibility="public" returnType="boolean">
+          <Argument type="String" name="carnet"/>
+        </Method>
+        <Method name="eliminarEstudiante" visibility="public" returnType="String">
+          <Argument type="String" name="carnet"/>
+        </Method>
+        <Method name="consultarEstudiante" visibility="public" returnType="String"/>
+        <Method name="getEstudiante" visibility="public" returnType="Estudiante">
+          <Argument type="String" name="carnet"/>
+        </Method>
+        <Method name="getListaEstudiantes" visibility="public" returnType="ArrayList&lt;Estudiante&gt;"/>
+        <Method name="agregarCurso" visibility="public" returnType="String">
+          <Argument type="Curso" name="curso"/>
+        </Method>
+        <Method name="verificarCurso" visibility="public" returnType="boolean">
+          <Argument type="String" name="siglas"/>
+        </Method>
+        <Method name="eliminarCurso" visibility="public" returnType="String">
+          <Argument type="String" name="siglas"/>
+        </Method>
+        <Method name="consultarCursos" visibility="public" returnType="String"/>
+        <Method name="getCurso" visibility="public" returnType="Curso">
+          <Argument type="String" name="siglas"/>
+        </Method>
+        <Method name="getListaCursos" visibility="public" returnType="ArrayList&lt;Curso&gt;"/>
+        <Method name="getMatrizCursos" visibility="public" returnType="String[][]">
+          <Argument type="String" name="carnet"/>
+        </Method>
+        <Method name="getCreditos" visibility="public" returnType="int"/>
+      </Methods>
+    </Class>
+    <Class xPosition="920.0" yPosition="1220.0" package="modelo" name="Estudiante" visibility="public">
+      <Constructors>
+        <Constructor name="Estudiante" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="carnet"/>
+        </Constructor>
+        <Constructor name="Estudiante" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="nombre" visibility="private" type="String"/>
+        <Field name="carnet" visibility="private" type="String"/>
+      </Fields>
+      <Methods>
+        <Method name="getNombre" visibility="public" returnType="String"/>
+        <Method name="setNombre" visibility="public" returnType="void">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getCarnet" visibility="public" returnType="String"/>
+        <Method name="setCarnet" visibility="public" returnType="void">
+          <Argument type="String" name="carnet"/>
+        </Method>
+        <Method name="toString" visibility="public" returnType="String"/>
+      </Methods>
+    </Class>
+    <Class xPosition="20.0" yPosition="1620.0" package="modelo" name="Curso" visibility="public">
+      <Constructors>
+        <Constructor name="Curso" visibility="public">
+          <Argument type="String" name="curso"/>
+          <Argument type="String" name="siglas"/>
+          <Argument type="int" name="creditos"/>
+        </Constructor>
+        <Constructor name="Curso" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="curso" visibility="private" type="String"/>
+        <Field name="siglas" visibility="private" type="String"/>
+        <Field name="creditos" visibility="private" type="int"/>
+        <Field name="estudiantes" visibility="private" type="ArrayList&lt;Estudiante&gt;"/>
+        <Field name="etiquetas" visibility="private" type="String[]" isStatic="true"/>
+      </Fields>
+      <Methods>
+        <Method name="getEtiquetas" visibility="public" returnType="String[]" isStatic="true"/>
+        <Method name="getTamannoEtiquetas" visibility="public" returnType="int" isStatic="true"/>
+        <Method name="datosCurso" visibility="public" returnType="String">
+          <Argument type="int" name="posicion"/>
+        </Method>
+        <Method name="getCurso" visibility="public" returnType="String"/>
+        <Method name="setCurso" visibility="public" returnType="void">
+          <Argument type="String" name="curso"/>
+        </Method>
+        <Method name="getSiglas" visibility="public" returnType="String"/>
+        <Method name="setSiglas" visibility="public" returnType="void">
+          <Argument type="String" name="siglas"/>
+        </Method>
+        <Method name="getCreditos" visibility="public" returnType="int"/>
+        <Method name="setCreditos" visibility="public" returnType="void">
+          <Argument type="int" name="creditos"/>
+        </Method>
+        <Method name="agregarEstudiante" visibility="public" returnType="String">
+          <Argument type="Estudiante" name="estudiante"/>
+        </Method>
+        <Method name="verificar" visibility="public" returnType="boolean">
+          <Argument type="String" name="carnet"/>
+        </Method>
+        <Method name="getArray" visibility="public" returnType="ArrayList&lt;Estudiante&gt;"/>
+        <Method name="toString" visibility="public" returnType="String"/>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="1620.0" package="control" name="ControlPrincipal" visibility="public">
+      <Constructors>
+        <Constructor name="ControlPrincipal" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="registro" visibility="private" type="Registro"/>
+      </Fields>
+      <Methods>
+        <Method name="actionPerformed" visibility="public" returnType="void">
+          <Argument type="ActionEvent" name="evento"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="1620.0" package="control" name="ControlCursos" visibility="public">
+      <Constructors>
+        <Constructor name="ControlCursos" visibility="public">
+          <Argument type="GUICursos" name="guiCursos"/>
+          <Argument type="PanelDataCurso" name="panelData"/>
+          <Argument type="PanelBotonesCurso" name="panelBotones"/>
+          <Argument type="Registro" name="registro"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="guiCursos" visibility="private" type="GUICursos"/>
+        <Field name="panelData" visibility="private" type="PanelDataCurso"/>
+        <Field name="panelBotones" visibility="private" type="PanelBotonesCurso"/>
+        <Field name="registro" visibility="private" type="Registro"/>
+      </Fields>
+      <Methods>
+        <Method name="actionPerformed" visibility="public" returnType="void">
+          <Argument type="ActionEvent" name="evento"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="920.0" yPosition="1620.0" package="control" name="ControlEstudiantes" visibility="public">
+      <Constructors>
+        <Constructor name="ControlEstudiantes" visibility="public">
+          <Argument type="GUIEstudiantes" name="guiEstudiantes"/>
+          <Argument type="PanelDataEstudiante" name="panelData"/>
+          <Argument type="PanelBotonesEstudiante" name="panelBotones"/>
+          <Argument type="Registro" name="registro"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="guiEstudiantes" visibility="private" type="GUIEstudiantes"/>
+        <Field name="panelData" visibility="private" type="PanelDataEstudiante"/>
+        <Field name="panelBotones" visibility="private" type="PanelBotonesEstudiante"/>
+        <Field name="registro" visibility="private" type="Registro"/>
+      </Fields>
+      <Methods>
+        <Method name="actionPerformed" visibility="public" returnType="void">
+          <Argument type="ActionEvent" name="evento"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="20.0" yPosition="2020.0" package="control" name="ControlReporte" visibility="public">
+      <Constructors>
+        <Constructor name="ControlReporte" visibility="public">
+          <Argument type="Registro" name="registro"/>
+          <Argument type="GUIReporte" name="reporte"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="reporte" visibility="private" type="GUIReporte"/>
+        <Field name="registro" visibility="private" type="Registro"/>
+      </Fields>
+      <Methods>
+        <Method name="actionPerformed" visibility="public" returnType="void">
+          <Argument type="ActionEvent" name="evento"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="2020.0" package="control" name="ControlMatricula" visibility="public">
+      <Constructors>
+        <Constructor name="ControlMatricula" visibility="public">
+          <Argument type="Registro" name="registro"/>
+          <Argument type="GUIMatricula" name="guiMatricula"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="registro" visibility="private" type="Registro"/>
+        <Field name="guiMatricula" visibility="private" type="GUIMatricula"/>
+      </Fields>
+      <Methods>
+        <Method name="actionPerformed" visibility="public" returnType="void">
+          <Argument type="ActionEvent" name="evento"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="control" source="GUIReporte" target="ControlReporte" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cursos" source="Registro" target="Curso" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List"/>
+    <UseRelation source="GUIMatricula" target="ControlMatricula" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="PanelBotonesCurso" target="ControlCursos" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="panelBotonesCurso1" source="GUICursos" target="Curso" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="panelDataCurso1" source="GUICursos" target="Curso" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="panelBotonesEstudiante1" source="GUIEstudiantes" target="Estudiante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="panelDataEstudiante1" source="GUIEstudiantes" target="Estudiante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="registro" source="ControlMatricula" target="Registro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="PanelBotonesEstudiante" target="ControlEstudiantes" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="estudiantes" source="Curso" target="Estudiante" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="estudiantes" source="Registro" target="Estudiante" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List"/>
+    <UseRelation source="Registro" target="Estudiante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="guiCursos" source="ControlCursos" target="Curso" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="panelData" source="ControlCursos" target="Curso" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="panelBotones" source="ControlCursos" target="Curso" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="PanelDataCurso" target="ControlCursos" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="registro" source="ControlEstudiantes" target="Registro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Registro" target="Curso" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="registro" source="ControlCursos" target="Registro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="registro" source="GUIMatricula" target="Registro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="controlEstudiantes" source="GUIEstudiantes" target="ControlEstudiantes" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Curso" target="Estudiante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="registro" source="ControlReporte" target="Registro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="guiMatricula" source="ControlMatricula" target="GUIMatricula" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="GUIReporte" target="ControlReporte" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="control" source="GUICursos" target="ControlCursos" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="GUIReporte" target="PanelTabla" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="reporte" source="ControlReporte" target="GUIReporte" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="guiEstudiantes" source="ControlEstudiantes" target="Estudiante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="panelData" source="ControlEstudiantes" target="Estudiante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="panelBotones" source="ControlEstudiantes" target="Estudiante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="panelTabla1" source="GUIReporte" target="PanelTabla" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="PanelDataEstudiante" target="ControlEstudiantes" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="control" source="GUIMatricula" target="ControlMatricula" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="registro" source="ControlPrincipal" target="Registro" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
