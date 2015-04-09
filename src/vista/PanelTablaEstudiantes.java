@@ -44,13 +44,11 @@ public class PanelTablaEstudiantes extends javax.swing.JPanel {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {},
+                {}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
         jTable1.setEnabled(false);
@@ -147,11 +145,17 @@ public class PanelTablaEstudiantes extends javax.swing.JPanel {
     }
     
     public String[] getFila(){
+
         String fila[];
+        
         fila = new String[jTable1.getColumnCount()];
-        int selecci= jTable1.getSelectedRow();
-        for(int columna=0;columna<fila.length;columna++){
+        
+        int selecci= jTable1.getSelectedRow()+1;
+        System.out.print(selecci);
+        for(int columna=0; columna<2; columna++){
+            
             fila[columna]=jTable1.getValueAt(selecci, columna).toString().trim();
+            
         }
         return fila;
     }
