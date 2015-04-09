@@ -6,6 +6,7 @@
 package vista;
 
 import control.ControlTablaEstudiantes;
+import javax.swing.JOptionPane;
 import modelo.Registro;
 
 /**
@@ -58,4 +59,8 @@ public class GUITablaEstudiantes extends GUIPrincipal {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private vista.PanelTablaEstudiantes panelTablaEstudiantes2;
     // End of variables declaration//GEN-END:variables
+
+    public static void mensaje(String mensaje){
+        JOptionPane.showMessageDialog(null, mensaje);
+    }
 }

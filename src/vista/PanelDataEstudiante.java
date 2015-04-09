@@ -35,7 +35,6 @@ public class PanelDataEstudiante extends javax.swing.JPanel {
         lblCarnet = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         txtCarnet = new javax.swing.JTextField();
-        btnBuscar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(51, 51, 51));
 
@@ -48,11 +47,6 @@ public class PanelDataEstudiante extends javax.swing.JPanel {
 
         lblCarnet.setForeground(new java.awt.Color(255, 255, 255));
         lblCarnet.setText("Carné:");
-
-        btnBuscar.setBackground(new java.awt.Color(153, 255, 255));
-        btnBuscar.setForeground(new java.awt.Color(0, 102, 102));
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar.png"))); // NOI18N
-        btnBuscar.setActionCommand("buscar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -69,10 +63,7 @@ public class PanelDataEstudiante extends javax.swing.JPanel {
                         .addGap(44, 44, 44)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtCarnet, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(txtCarnet, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -85,18 +76,15 @@ public class PanelDataEstudiante extends javax.swing.JPanel {
                     .addComponent(lblNombre)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblCarnet)
-                        .addComponent(txtCarnet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCarnet)
+                    .addComponent(txtCarnet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBuscar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblCarnet;
     private javax.swing.JLabel lblNombre;
@@ -127,14 +115,6 @@ public class PanelDataEstudiante extends javax.swing.JPanel {
 
     public JTextField getTxCarnet() {
         return txtCarnet;
-    }
-    
-    
-    
-    public static final String BTNE_BUSCAR="buscar";
-    
-    public void addEscucha(ControlEstudiantes control){
-        btnBuscar.addActionListener(control);
     }
 
 }

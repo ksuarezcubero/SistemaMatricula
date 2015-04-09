@@ -14,6 +14,7 @@ import java.awt.event.MouseListener;
 import modelo.Estudiante;
 import modelo.Registro;
 import vista.GUIEstudiantes;
+import vista.GUITablaEstudiantes;
 import vista.PanelBotonesEstudiante;
 import vista.PanelDataEstudiante;
 import vista.PanelTablaEstudiantes;
@@ -37,7 +38,7 @@ public class ControlTablaEstudiantes implements ActionListener, ItemListener, Mo
     
     public void actionPerformed(ActionEvent evento){
         if(evento.getActionCommand().equalsIgnoreCase(panelTabla.BTN_AGREGAR)){
-            GUIEstudiantes guiEstudiantes=new GUIEstudiantes(null,true,registro);
+            GUIEstudiantes guiEstudiantes=new GUIEstudiantes(null,true,registro,panelTabla);
             panelBotones=guiEstudiantes.getPanelBotones();
             guiEstudiantes.setVisible(true);
         }
@@ -47,6 +48,7 @@ public class ControlTablaEstudiantes implements ActionListener, ItemListener, Mo
                 panelTabla.llenarTabla(registro.getMatrizBuscarEstudiante(busqueda, panelTabla.getTxtBuscar()), Estudiante.getEtiquetas());
                 panelTabla.limpiar();
             }
+            
             if(busqueda==2){
                 panelTabla.llenarTabla(registro.getMatrizBuscarEstudiante(busqueda, panelTabla.getTxtBuscar()), Estudiante.getEtiquetas());
                 panelTabla.limpiar();
@@ -76,7 +78,7 @@ public class ControlTablaEstudiantes implements ActionListener, ItemListener, Mo
     @Override
     public void mouseClicked(MouseEvent mEvent){
         String[] fila=panelTabla.getFila();
-        GUIEstudiantes guiEstudiantes=new GUIEstudiantes(null, true, registro);
+        GUIEstudiantes guiEstudiantes=new GUIEstudiantes(null, true, registro,panelTabla);
         PanelDataEstudiante panelData;
         panelData=guiEstudiantes.getPanelData();
         panelData.setTxtNombre(fila[0]);
@@ -88,6 +90,7 @@ public class ControlTablaEstudiantes implements ActionListener, ItemListener, Mo
 
     @Override
     public void mousePressed(MouseEvent e) {
+         
     }
 
     @Override

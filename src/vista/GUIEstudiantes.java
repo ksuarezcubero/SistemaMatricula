@@ -21,12 +21,11 @@ public class GUIEstudiantes extends javax.swing.JDialog {
     /**
      * Creates new form GUIEstudiantes
      */
-    public GUIEstudiantes(java.awt.Frame parent, boolean modal, Registro registro){
+    public GUIEstudiantes(java.awt.Frame parent, boolean modal, Registro registro, PanelTablaEstudiantes panelTablaEstudiantes){
         super(parent,modal);
         initComponents();
-        controlEstudiantes = new ControlEstudiantes(this, panelDataEstudiante1, panelBotonesEstudiante1, registro);
+        controlEstudiantes = new ControlEstudiantes(this, panelDataEstudiante1, panelBotonesEstudiante1, registro, panelTablaEstudiantes);
         panelBotonesEstudiante1.addEscucha(controlEstudiantes);
-        panelDataEstudiante1.addEscucha(controlEstudiantes);
     }
 
     /**
@@ -52,13 +51,13 @@ public class GUIEstudiantes extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBotonesEstudiante1, javax.swing.GroupLayout.DEFAULT_SIZE, 353, Short.MAX_VALUE)
+            .addComponent(panelBotonesEstudiante1, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
             .addComponent(panelDataEstudiante1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(panelDataEstudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelDataEstudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelBotonesEstudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -75,6 +74,11 @@ public class GUIEstudiantes extends javax.swing.JDialog {
 
     public static void mensage(String mensage){
         JOptionPane.showMessageDialog(null, mensage);
+    }
+    
+   
+    public static int mensajeConfirmar(String data) {
+        return  JOptionPane.showConfirmDialog(null, data);
     }
     
     public PanelBotonesEstudiante getPanelBotones(){

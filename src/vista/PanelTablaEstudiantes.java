@@ -33,26 +33,14 @@ public class PanelTablaEstudiantes extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         btnAgregar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         cbxFiltro = new javax.swing.JComboBox();
         lblEtiqueta = new javax.swing.JLabel();
         txtBuscar = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {},
-                {}
-            },
-            new String [] {
-
-            }
-        ));
-        jTable1.setEnabled(false);
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jtEstudiantes = new javax.swing.JTable();
 
         btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/agregarStud.png"))); // NOI18N
         btnAgregar.setActionCommand("agregar");
@@ -66,6 +54,17 @@ public class PanelTablaEstudiantes extends javax.swing.JPanel {
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar.png"))); // NOI18N
         btnBuscar.setActionCommand("buscar");
 
+        jtEstudiantes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane2.setViewportView(jtEstudiantes);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -73,21 +72,21 @@ public class PanelTablaEstudiantes extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 391, Short.MAX_VALUE)
+                    .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbxFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblEtiqueta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cbxFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblEtiqueta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(177, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -105,9 +104,9 @@ public class PanelTablaEstudiantes extends javax.swing.JPanel {
                     .addComponent(btnBuscar))
                 .addGap(27, 27, 27)
                 .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -118,8 +117,8 @@ public class PanelTablaEstudiantes extends javax.swing.JPanel {
     private javax.swing.JButton btnBuscar;
     private javax.swing.JComboBox cbxFiltro;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jtEstudiantes;
     private javax.swing.JLabel lblEtiqueta;
     private javax.swing.JTextField txtBuscar;
     // End of variables declaration//GEN-END:variables
@@ -128,8 +127,8 @@ public class PanelTablaEstudiantes extends javax.swing.JPanel {
     public static final String BTN_AGREGAR="agregar";
     
      public void llenarTabla(String [][] lista, String [] etiquetas){
-        this.jTable1.setModel(new DefaultTableModel(lista, etiquetas));
-        jScrollPane1.setViewportView(jTable1);
+        this.jtEstudiantes.setModel(new DefaultTableModel(lista, etiquetas));
+        jScrollPane2.setViewportView(jtEstudiantes);
     }
     
     public void llenarComboBox(){
@@ -141,20 +140,17 @@ public class PanelTablaEstudiantes extends javax.swing.JPanel {
         this.btnAgregar.addActionListener(control);
         this.btnBuscar.addActionListener(control);
         this.cbxFiltro.addItemListener(control);
-        this.jTable1.addMouseListener(control);
+        this.jtEstudiantes.addMouseListener(control);
     }
     
     public String[] getFila(){
 
-        String fila[];
-        
-        fila = new String[jTable1.getColumnCount()];
-        
-        int selecci= jTable1.getSelectedRow()+1;
-        System.out.print(selecci);
+        String fila[] = new String[jtEstudiantes.getColumnCount()];
+        int filaSeleccionada= jtEstudiantes.getSelectedRow();
+        System.out.print(filaSeleccionada);
         for(int columna=0; columna<2; columna++){
             
-            fila[columna]=jTable1.getValueAt(selecci, columna).toString().trim();
+            fila[columna]=jtEstudiantes.getValueAt(filaSeleccionada, columna).toString().trim();
             
         }
         return fila;

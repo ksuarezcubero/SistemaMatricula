@@ -13,6 +13,7 @@ import modelo.Registro;
 import vista.GUIEstudiantes;
 import vista.PanelBotonesEstudiante;
 import vista.PanelDataEstudiante;
+import vista.PanelTablaEstudiantes;
 
 /**
  *
@@ -24,12 +25,14 @@ public class ControlEstudiantes implements ActionListener{
     private PanelDataEstudiante panelData;
     private PanelBotonesEstudiante panelBotones;
     private Registro registro;
+    private PanelTablaEstudiantes panelTabla;
     
-    public ControlEstudiantes(GUIEstudiantes guiEstudiantes, PanelDataEstudiante panelData, PanelBotonesEstudiante panelBotones, Registro registro){
+    public ControlEstudiantes(GUIEstudiantes guiEstudiantes, PanelDataEstudiante panelData, PanelBotonesEstudiante panelBotones, Registro registro, PanelTablaEstudiantes panelTabla){
         this.guiEstudiantes=guiEstudiantes;
         this.panelData=panelData;
         this.panelBotones=panelBotones;
         this.registro=registro;
+        this.panelTabla=panelTabla;
     }
     
     public void actionPerformed(ActionEvent evento){
@@ -41,23 +44,23 @@ public class ControlEstudiantes implements ActionListener{
             }else{
                 guiEstudiantes.mensage(registro.agregarEstudiante(new Estudiante(panelData.getTxtNombre(), panelData.getTxtCarnet())));
                 panelData.limpiar();
+                panelTabla.llenarTabla(registro.getMatrizEstudiantes(), Estudiante.getEtiquetas());
+                if(GUIEstudiantes.mensajeConfirmar("¿Desea agregar otro estudiante?")==1){
+                    guiEstudiantes.dispose();
+                }
             }
         }
         
         if(evento.getActionCommand().equalsIgnoreCase(PanelBotonesEstudiante.BTNE_ATRAS)){
-            guiEstudiantes.dispose();
-        }
-        
-        if(evento.getActionCommand().equalsIgnoreCase(PanelBotonesEstudiante.BTNE_CONSULTAR)){
-            
-            panelData.limpiar();
+            if(GUIEstudiantes.mensajeConfirmar("¿Desea salir?")==0){
+                guiEstudiantes.dispose();
+            }
         }
         
         if(evento.getActionCommand().equalsIgnoreCase(PanelBotonesEstudiante.BTNE_ELIMINAR)){
-            guiEstudiantes.mensage(registro.eliminarEstudiante(panelData.getTxtCarnet()));
-            panelData.limpiar();
-            panelBotones.estadoBtn(false);
-            panelData.getTxCarnet().setEditable(true);
+            registro.eliminarEstudiante(panelData.getTxtCarnet());
+            panelTabla.llenarTabla(registro.getMatrizEstudiantes(), Estudiante.getEtiquetas());
+            guiEstudiantes.dispose();
         }
         
         if(evento.getActionCommand().equalsIgnoreCase(PanelBotonesEstudiante.BTNE_MODIFICAR)){
@@ -68,24 +71,8 @@ public class ControlEstudiantes implements ActionListener{
             panelData.limpiar();
             panelData.getTxCarnet().setEditable(true);
             panelBotones.estadoBtn(false);
-        }
-        
-        if(evento.getActionCommand().equalsIgnoreCase(PanelDataEstudiante.BTNE_BUSCAR)){
-            Estudiante estudiante;
-            estudiante=registro.getEstudiante(panelData.getTxtCarnet());
-            if(panelData.getTxtCarnet().equalsIgnoreCase("")){
-                guiEstudiantes.mensage("Debe introducir un carnet");
-            }else{
-                if(estudiante==null){
-                    guiEstudiantes.mensage("El carné ingresado no existe");
-                }else{
-                    panelData.setTxtNombre(estudiante.getNombre());
-                    
-                    panelBotones.estadoBtn(true);
-                    panelData.getTxCarnet().setEditable(false);
-                    
-                }
-            }
+            panelTabla.llenarTabla(registro.getMatrizEstudiantes(), Estudiante.getEtiquetas());
+            guiEstudiantes.dispose();
         }
     }
 }
