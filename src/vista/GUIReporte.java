@@ -152,17 +152,17 @@ public class GUIReporte extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtCarnetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCarnetActionPerformed
+    private void txtCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCreditosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCarnetActionPerformed
+    }//GEN-LAST:event_txtCreditosActionPerformed
 
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreActionPerformed
 
-    private void txtCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCreditosActionPerformed
+    private void txtCarnetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCarnetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCreditosActionPerformed
+    }//GEN-LAST:event_txtCarnetActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
