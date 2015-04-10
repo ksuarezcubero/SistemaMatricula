@@ -7,12 +7,15 @@ package control;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import modelo.Curso;
 import modelo.Estudiante;
 import modelo.Registro;
 import vista.GUIMatricula;
+import vista.GUIReporte;
 
 /**
  *
@@ -32,16 +35,21 @@ public class ControlMatricula implements ActionListener, MouseListener{
         if(evento.getActionCommand().equalsIgnoreCase(guiMatricula.BTN_ATRAS)){
             guiMatricula.dispose();
         }
-        if(evento.getActionCommand().equalsIgnoreCase(guiMatricula.BTN_ACEPTAR)){
-            
-            Curso curso=(Curso)guiMatricula.getCbxCurso().getSelectedItem();
-           // guiMatricula.mensage(curso.agregarEstudiante(estudiante));            
+        if(evento.getActionCommand().equalsIgnoreCase(GUIMatricula.BTN_REPORTE)){
+            GUIReporte guiReporte=new GUIReporte(registro);
+            guiReporte.show();
         }
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
         
+        Curso curso=(Curso)guiMatricula.getCbxCurso().getSelectedItem();
+        Estudiante estudiante=new Estudiante();
+        String[] fila=guiMatricula.getFila();
+        estudiante.setNombre(fila[0]);
+        estudiante.setCarnet(fila[1]);
+        guiMatricula.mensage(curso.agregarEstudiante(estudiante));
     }
 
     @Override
@@ -59,4 +67,6 @@ public class ControlMatricula implements ActionListener, MouseListener{
     @Override
     public void mouseExited(MouseEvent e) {
     }
+
+    
 }

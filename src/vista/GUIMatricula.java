@@ -31,6 +31,7 @@ public class GUIMatricula extends javax.swing.JFrame {
         this.registro=registro;
         this.control=new ControlMatricula(registro, this);
         llenarCmbx();
+        llenarTabla(registro.getMatrizEstudiantes(), Estudiante.getEtiquetas());
         addEscucha(control);
     }
 
@@ -44,22 +45,20 @@ public class GUIMatricula extends javax.swing.JFrame {
     private void initComponents() {
 
         cbxCurso = new javax.swing.JComboBox();
-        btnMatricular = new javax.swing.JButton();
         btnAtras = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        btnReporte = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Matricula");
         setBackground(new java.awt.Color(0, 0, 0));
 
-        btnMatricular.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/matricular.png"))); // NOI18N
-        btnMatricular.setActionCommand("aceptar");
-
         btnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salir.png"))); // NOI18N
-        btnAtras.setActionCommand("atras");
+        btnAtras.setText("Salir");
+        btnAtras.setActionCommand("Salir");
 
         jLabel1.setFont(new java.awt.Font("Droid Sans", 3, 24)); // NOI18N
         jLabel1.setText("Matricula");
@@ -76,6 +75,9 @@ public class GUIMatricula extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        btnReporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1428661107_editor_document_file_2-24.png"))); // NOI18N
+        btnReporte.setText("Reporte");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -91,7 +93,7 @@ public class GUIMatricula extends javax.swing.JFrame {
                             .addComponent(cbxCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnMatricular, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnReporte)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(btnAtras))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -101,20 +103,17 @@ public class GUIMatricula extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnAtras))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cbxCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                        .addComponent(btnMatricular)))
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReporte))
                 .addContainerGap())
         );
 
@@ -125,7 +124,7 @@ public class GUIMatricula extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtras;
-    private javax.swing.JButton btnMatricular;
+    private javax.swing.JButton btnReporte;
     private javax.swing.JComboBox cbxCurso;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -146,17 +145,28 @@ public class GUIMatricula extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
     }
     
+    public String[] getFila(){
+        String[] fila=new String[jTable1.getColumnCount()];
+        int filaSeleccionada= jTable1.getSelectedRow();
+        for(int i=0;i<fila.length;i++){
+            fila[i]=jTable1.getValueAt(filaSeleccionada, i).toString().trim();
+        }
+        
+        return fila;
+    }
+    
     public JComboBox getCbxCurso(){
         return cbxCurso;
     }
     
     public void addEscucha(ControlMatricula control){
         btnAtras.addActionListener(control);
-        btnMatricular.addActionListener(control);
+        btnReporte.addActionListener(control);
+        jTable1.addMouseListener(control);
     }
     
-    public static final String BTN_ATRAS="atras";
-    public static final String BTN_ACEPTAR="aceptar";
+    public static final String BTN_ATRAS="Salir";
+    public static final String BTN_REPORTE="Reporte";
     
     public void mensage(String mensage){
         JOptionPane.showMessageDialog(null,mensage);
