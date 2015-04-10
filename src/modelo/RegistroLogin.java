@@ -20,11 +20,21 @@ public class RegistroLogin {
     
     public RegistroLogin(){
         usuarios=new ArrayList<Usuario>();
+        llenarUsuarios();
     }
     
     public void llenarUsuarios(){
         usuarios.add(usuario1);
         usuarios.add(usuario2);
         usuarios.add(usuario3);
+    }
+    
+    public boolean verificar(String usuario,String contraseña){
+        for(Usuario user:usuarios){
+            if(user.getUsuario().equalsIgnoreCase(usuario) && user.getContraseña().equalsIgnoreCase(contraseña)){
+                return true;
+            }
+        }
+        return false;
     }
 }
