@@ -13,14 +13,15 @@ import modelo.Registro;
  *
  * @author kevin
  */
-public class GUICursos extends javax.swing.JFrame {
+public class GUICursos extends javax.swing.JDialog {
 
     private ControlCursos control;
     
     /**
      * Creates new form GUICursos
      */
-    public GUICursos(Registro registro) {
+    public GUICursos(java.awt.Frame parent, boolean modal,Registro registro) {
+        super(parent,modal);
         initComponents();
         control = new ControlCursos(this, panelDataCurso1, panelBotonesCurso1, registro);
         panelBotonesCurso1.addEscucha(control);

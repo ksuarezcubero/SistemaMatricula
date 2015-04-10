@@ -5,6 +5,7 @@
  */
 package vista;
 
+import control.ControlTablaCursos;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -18,6 +19,7 @@ public class PanelTablaCursosMatriculados extends javax.swing.JPanel {
      */
     public PanelTablaCursosMatriculados() {
         initComponents();
+        
     }
 
     /**

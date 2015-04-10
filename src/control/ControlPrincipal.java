@@ -13,6 +13,7 @@ import vista.GUIEstudiantes;
 import vista.GUIMatricula;
 import vista.GUIReporte;
 import vista.GUIPrincipal;
+import vista.GUITablaCursos;
 import vista.GUITablaEstudiantes;
 
 /**
@@ -31,13 +32,14 @@ public class ControlPrincipal implements ActionListener{
     
     public void actionPerformed(ActionEvent evento){
         if(evento.getActionCommand().equalsIgnoreCase(GUIPrincipal.MENU_ESTUDIANTES)){
-            guiPricipal.dispose();
             GUITablaEstudiantes guitablaEstudiantes=new GUITablaEstudiantes(registro);
             guitablaEstudiantes.show();
         }
         
         if(evento.getActionCommand().equalsIgnoreCase(GUIPrincipal.MENU_CURSOS)){
             
+            GUITablaCursos guiTablaCursos=new GUITablaCursos(registro);
+            guiTablaCursos.show();
         }
         
         if(evento.getActionCommand().equalsIgnoreCase(GUIPrincipal.MENU_MATRICULA)){

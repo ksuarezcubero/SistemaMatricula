@@ -6,6 +6,7 @@
 package vista;
 
 import control.ControlTablaEstudiantes;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import modelo.Registro;
 
@@ -13,7 +14,7 @@ import modelo.Registro;
  *
  * @author kevin
  */
-public class GUITablaEstudiantes extends GUIPrincipal {
+public class GUITablaEstudiantes extends JFrame {
 
     private Registro registro;
     /**
@@ -22,7 +23,7 @@ public class GUITablaEstudiantes extends GUIPrincipal {
     public GUITablaEstudiantes(Registro registro) {
         initComponents();
         this.registro=registro;
-        ControlTablaEstudiantes control=new ControlTablaEstudiantes(registro, panelTablaEstudiantes2);
+        ControlTablaEstudiantes control=new ControlTablaEstudiantes(this,registro, panelTablaEstudiantes2);
         panelTablaEstudiantes2.addEscucha(control);
     }
 
@@ -37,7 +38,7 @@ public class GUITablaEstudiantes extends GUIPrincipal {
 
         panelTablaEstudiantes2 = new vista.PanelTablaEstudiantes();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

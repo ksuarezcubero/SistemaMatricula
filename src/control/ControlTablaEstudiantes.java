@@ -29,11 +29,12 @@ public class ControlTablaEstudiantes implements ActionListener, ItemListener, Mo
     private PanelTablaEstudiantes panelTabla;
     private int busqueda=0;
     private PanelBotonesEstudiante panelBotones;
-   
+    private GUITablaEstudiantes guiTablaEstudiantes;
     
-    public ControlTablaEstudiantes(Registro registro, PanelTablaEstudiantes panelTabla){
+    public ControlTablaEstudiantes(GUITablaEstudiantes guiTablaEstudiantes, Registro registro, PanelTablaEstudiantes panelTabla){
         this.registro=registro;
         this.panelTabla=panelTabla;
+        this.guiTablaEstudiantes=guiTablaEstudiantes;
     }
     
     public void actionPerformed(ActionEvent evento){
@@ -53,6 +54,9 @@ public class ControlTablaEstudiantes implements ActionListener, ItemListener, Mo
                 panelTabla.llenarTabla(registro.getMatrizBuscarEstudiante(busqueda, panelTabla.getTxtBuscar()), Estudiante.getEtiquetas());
                 panelTabla.limpiar();
             }
+        }
+        if(evento.getActionCommand().equalsIgnoreCase(panelTabla.BTN_SALIR)){
+            guiTablaEstudiantes.dispose();
         }
     }
     
