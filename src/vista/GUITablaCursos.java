@@ -19,7 +19,7 @@ public class GUITablaCursos extends javax.swing.JFrame {
      */
     public GUITablaCursos(Registro registro) {
         initComponents();
-        ControlTablaCursos control=new ControlTablaCursos(this,registro);
+        ControlTablaCursos control=new ControlTablaCursos(this,registro,panelTablaCursos1);
         panelTablaCursos1.addEscucha(control);
     }
 

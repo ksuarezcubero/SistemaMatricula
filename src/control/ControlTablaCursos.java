@@ -11,6 +11,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import modelo.Estudiante;
 import modelo.Registro;
 import vista.GUICursos;
 import vista.GUITablaCursos;
@@ -25,10 +26,13 @@ public class ControlTablaCursos implements ActionListener, ItemListener, MouseLi
 
     private Registro registro;
     private GUITablaCursos guiTablaCursos;
+    private int consulta;
+    private PanelTablaCursos panelTablaCursos;
     
-    public ControlTablaCursos(GUITablaCursos guiTablaCurso, Registro registro) {
+    public ControlTablaCursos(GUITablaCursos guiTablaCurso, Registro registro, PanelTablaCursos panelTablaCursos) {
        this.registro=registro;
        this.guiTablaCursos=guiTablaCurso;
+       this.panelTablaCursos=panelTablaCursos;
     }
 
     @Override
@@ -38,7 +42,15 @@ public class ControlTablaCursos implements ActionListener, ItemListener, MouseLi
             guiCursos.setVisible(true);
         }
         if(e.getActionCommand().equalsIgnoreCase(PanelTablaCursos.BTN_BUSCAR)){
-            
+            if(consulta==1){
+                
+            }
+            if(consulta==2){
+                
+            }
+            if(consulta==3){
+                
+            }
         }
         if(e.getActionCommand().equalsIgnoreCase(PanelTablaCursos.BTN_SALIR)){
             guiTablaCursos.dispose();
@@ -47,6 +59,27 @@ public class ControlTablaCursos implements ActionListener, ItemListener, MouseLi
 
     @Override
     public void itemStateChanged(ItemEvent e) {
+        if(e.getStateChange()==e.SELECTED){
+            if(e.getItem().toString().equalsIgnoreCase("Todo")){
+                panelTablaCursos.llenarTabla(registro.getMatrizCursos(), Estudiante.getEtiquetas());
+                panelTablaCursos.estadoTxtBuscar(false);
+            }
+            if(e.getItem().toString().equalsIgnoreCase("Siglas")){
+                consulta=1;
+                panelTablaCursos.estadoTxtBuscar(true);
+                panelTablaCursos.setEtiquetaBuscar("Siglas:");
+            }
+            if(e.getItem().toString().equalsIgnoreCase("Nombre")){
+                consulta=2;
+                panelTablaCursos.estadoTxtBuscar(true);
+                panelTablaCursos.setEtiquetaBuscar("Nombre:");
+            }
+            if(e.getItem().toString().equalsIgnoreCase("Creditos")){
+                consulta=3;
+                panelTablaCursos.estadoTxtBuscar(true);
+                panelTablaCursos.setEtiquetaBuscar("Creditos");
+            }
+        }
     }
 
     @Override
