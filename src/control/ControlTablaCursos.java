@@ -17,6 +17,7 @@ import modelo.Registro;
 import vista.GUICursos;
 import vista.GUITablaCursos;
 import vista.PanelBotonesCurso;
+import vista.PanelDataCurso;
 import vista.PanelTablaCursos;
 
 /**
@@ -85,6 +86,17 @@ public class ControlTablaCursos implements ActionListener, ItemListener, MouseLi
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        String [] fila=panelTablaCursos.getFila();
+        GUICursos guiCurso=new GUICursos(null, true, registro, panelTablaCursos);
+        PanelDataCurso panelDataCurso;
+        panelDataCurso=guiCurso.getPanelData();
+        panelDataCurso.setTxtSiglas(fila[0]);
+        panelDataCurso.setTxtNombre(fila[1]);
+        panelDataCurso.setTxtCreditos(fila[2]);
+        PanelBotonesCurso panelBotonesCurso;
+        panelBotonesCurso=guiCurso.getPanelBotones();
+        panelBotonesCurso.estado(true);
+        guiCurso.setVisible(true);
     }
 
     @Override

@@ -74,4 +74,14 @@ public class GUICursos extends javax.swing.JDialog {
     public static void mensage(String mensage){
         JOptionPane.showMessageDialog(null, mensage);
     }
+    public static int mensajeConfirmar(String mensaje){
+        return JOptionPane.showConfirmDialog(null, mensaje);
+    }
+    public PanelBotonesCurso getPanelBotones(){
+        return panelBotonesCurso1;
+    }
+    
+    public PanelDataCurso getPanelData(){
+        return panelDataCurso1;
+    }
 }

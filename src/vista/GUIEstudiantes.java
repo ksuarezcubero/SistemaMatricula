@@ -72,13 +72,13 @@ public class GUIEstudiantes extends javax.swing.JDialog {
     private vista.PanelDataEstudiante panelDataEstudiante1;
     // End of variables declaration//GEN-END:variables
 
-    public static void mensage(String mensage){
-        JOptionPane.showMessageDialog(null, mensage);
+    public static void mensage(String mensaje){
+        JOptionPane.showMessageDialog(null, mensaje);
     }
     
    
-    public static int mensajeConfirmar(String data) {
-        return  JOptionPane.showConfirmDialog(null, data);
+    public static int mensajeConfirmar(String mensaje) {
+        return  JOptionPane.showConfirmDialog(null, mensaje);
     }
     
     public PanelBotonesEstudiante getPanelBotones(){
