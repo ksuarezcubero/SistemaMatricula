@@ -11,6 +11,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import modelo.Curso;
 import modelo.Estudiante;
 import modelo.Registro;
 import vista.GUICursos;
@@ -38,7 +39,7 @@ public class ControlTablaCursos implements ActionListener, ItemListener, MouseLi
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equalsIgnoreCase(PanelTablaCursos.BTN_AGREGAR)){
-            GUICursos guiCursos=new GUICursos(null, true, registro);
+            GUICursos guiCursos=new GUICursos(null, true, registro,panelTablaCursos);
             guiCursos.setVisible(true);
         }
         if(e.getActionCommand().equalsIgnoreCase(PanelTablaCursos.BTN_BUSCAR)){
@@ -61,7 +62,7 @@ public class ControlTablaCursos implements ActionListener, ItemListener, MouseLi
     public void itemStateChanged(ItemEvent e) {
         if(e.getStateChange()==e.SELECTED){
             if(e.getItem().toString().equalsIgnoreCase("Todo")){
-                panelTablaCursos.llenarTabla(registro.getMatrizCursos(), Estudiante.getEtiquetas());
+                panelTablaCursos.llenarTabla(registro.getMatrizCursos(), Curso.getEtiquetas());
                 panelTablaCursos.estadoTxtBuscar(false);
             }
             if(e.getItem().toString().equalsIgnoreCase("Siglas")){

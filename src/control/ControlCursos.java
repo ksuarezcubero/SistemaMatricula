@@ -13,6 +13,7 @@ import modelo.Registro;
 import vista.GUICursos;
 import vista.PanelBotonesCurso;
 import vista.PanelDataCurso;
+import vista.PanelTablaCursos;
 
 /**
  *
@@ -25,7 +26,7 @@ public class ControlCursos implements ActionListener{
     private PanelBotonesCurso panelBotones;
     private Registro registro;
     
-    public ControlCursos(GUICursos guiCursos, PanelDataCurso panelData, PanelBotonesCurso panelBotones, Registro registro){
+    public ControlCursos(GUICursos guiCursos, PanelDataCurso panelData, PanelBotonesCurso panelBotones, Registro registro,PanelTablaCursos panelTablaCurso){
         this.guiCursos=guiCursos;
         this.panelData=panelData;
         this.panelBotones=panelBotones;

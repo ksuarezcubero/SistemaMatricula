@@ -16,14 +16,15 @@ import modelo.Registro;
 public class GUICursos extends javax.swing.JDialog {
 
     private ControlCursos control;
+   
     
     /**
      * Creates new form GUICursos
      */
-    public GUICursos(java.awt.Frame parent, boolean modal,Registro registro) {
+    public GUICursos(java.awt.Frame parent, boolean modal,Registro registro,PanelTablaCursos panelTablaCursos) {
         super(parent,modal);
         initComponents();
-        control = new ControlCursos(this, panelDataCurso1, panelBotonesCurso1, registro);
+        this.control = new ControlCursos(this, panelDataCurso1, panelBotonesCurso1, registro, panelTablaCursos);
         panelBotonesCurso1.addEscucha(control);
         panelDataCurso1.addEscucha(control);
         
