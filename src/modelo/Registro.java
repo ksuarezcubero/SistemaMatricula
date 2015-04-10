@@ -6,6 +6,7 @@
 package modelo;
 
 import java.util.ArrayList;
+import javafx.collections.ArrayChangeListener;
 
 /**
  *
@@ -192,9 +193,37 @@ public class Registro {
         return matriz;
     }
     
+    public String [][] getMatrizBuscarCursos(int filtro, String busqueda){
+        ArrayList<Curso> arrayAux=new ArrayList<Curso>();
+        for(Curso curso:cursos){
+            if(filtro==1){
+                if(curso.getCurso().equalsIgnoreCase(busqueda)){
+                    arrayAux.add(curso);
+                }
+            }else if(filtro==2){
+                if(curso.getSiglas().equalsIgnoreCase(busqueda)){
+                    arrayAux.add(curso);
+                }
+            }else{
+                if(curso.getCreditos()==Integer.parseInt(busqueda)){
+                    arrayAux.add(curso);
+                }
+            }
+        }
+        String[][] matriz=new String[arrayAux.size()][Curso.getTamannoEtiquetas()];
+        for(int fila=0;fila<matriz.length;fila++){
+            for(int columna=0;columna<matriz[fila].length;columna++){
+                matriz[fila][columna]=arrayAux.get(fila).datosCurso(columna);
+            }
+        }
+        return matriz;
+    }
+    
     public int getCreditos(){
         return creditos;
     }
+    
+    
     
     public String[][] getMatrizCursos(){
         String [][] matriz=new String[cursos.size()][Curso.getTamannoEtiquetas()];

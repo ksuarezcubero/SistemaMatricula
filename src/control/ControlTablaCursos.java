@@ -45,13 +45,13 @@ public class ControlTablaCursos implements ActionListener, ItemListener, MouseLi
         }
         if(e.getActionCommand().equalsIgnoreCase(PanelTablaCursos.BTN_BUSCAR)){
             if(consulta==1){
-                
+                panelTablaCursos.llenarTabla(registro.getMatrizBuscarCursos(consulta, panelTablaCursos.getTxtBuscar()), Curso.getEtiquetas());
             }
             if(consulta==2){
-                
+                panelTablaCursos.llenarTabla(registro.getMatrizBuscarCursos(consulta, panelTablaCursos.getTxtBuscar()), Curso.getEtiquetas());
             }
             if(consulta==3){
-                
+                panelTablaCursos.llenarTabla(registro.getMatrizBuscarCursos(consulta, panelTablaCursos.getTxtBuscar()), Curso.getEtiquetas());
             }
         }
         if(e.getActionCommand().equalsIgnoreCase(PanelTablaCursos.BTN_SALIR)){
@@ -90,8 +90,8 @@ public class ControlTablaCursos implements ActionListener, ItemListener, MouseLi
         GUICursos guiCurso=new GUICursos(null, true, registro, panelTablaCursos);
         PanelDataCurso panelDataCurso;
         panelDataCurso=guiCurso.getPanelData();
-        panelDataCurso.setTxtSiglas(fila[0]);
-        panelDataCurso.setTxtNombre(fila[1]);
+        panelDataCurso.setTxtSiglas(fila[1]);
+        panelDataCurso.setTxtNombre(fila[0]);
         panelDataCurso.setTxtCreditos(fila[2]);
         PanelBotonesCurso panelBotonesCurso;
         panelBotonesCurso=guiCurso.getPanelBotones();
