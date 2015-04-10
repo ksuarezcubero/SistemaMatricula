@@ -162,7 +162,7 @@ public class PanelTablaEstudiantes extends javax.swing.JPanel {
         String fila[] = new String[jtEstudiantes.getColumnCount()];
         int filaSeleccionada= jtEstudiantes.getSelectedRow();
         System.out.print(filaSeleccionada);
-        for(int columna=0; columna<2; columna++){
+        for(int columna=0; columna<fila.length; columna++){
             
             fila[columna]=jtEstudiantes.getValueAt(filaSeleccionada, columna).toString().trim();
             

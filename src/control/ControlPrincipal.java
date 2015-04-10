@@ -43,7 +43,8 @@ public class ControlPrincipal implements ActionListener{
         }
         
         if(evento.getActionCommand().equalsIgnoreCase(GUIPrincipal.MENU_MATRICULA)){
-            
+            GUIMatricula guiMatricula=new GUIMatricula(registro);
+            guiMatricula.show();
         }
         
         if(evento.getActionCommand().equalsIgnoreCase(GUIPrincipal.MENU_SALIR)){
